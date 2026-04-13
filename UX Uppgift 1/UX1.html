@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <link rel="stylesheet" href="ux1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Convergence&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Tigertaxi</title>
+    <script src="ux1.js" defer></script>
+</head>
+
+<body>
+    <div class="thegrid">
+        <nav class="navbar">
+            <div class="dropdown-menu">☰</div>
+
+            <div class="header">Tigertaxi</div>
+
+            <div class="nav-buttons"> 
+                <button class="top_button1">Ny bokning</button> 
+                <button class="top_button2">Aktiva körningar</button> 
+                <button class="top_button3">Historik</button> 
+            </div>
+
+            <div class="clock">13:55</div>
+        </nav>
+
+        <div class="form" id="form">
+            <h2>Information om kund:</h2>
+
+            <p>Nummer som ringer: 070 000 00 00</p>
+
+            <label for="name">Namn:</label>
+            <input id="name" name="name" type="text" placeholder="Kajsa">
+
+
+            <label for="from">Från:</label>
+            <input id="from" type="text" name="från" placeholder="Hagens Kapellväg 6, Göteborg">
+
+            <button class="add-place-button" type="button" class="add-place" id="place_from">+ Lägg till plats</button>
+
+
+            <label for="till">Till:</label>
+            <input id="till" type="text" name="till" placeholder="Drottningtorget 5, Göteborg">
+
+            <button class="add-place-button" type="button" class="add-place" id="place_to">+ Lägg till plats</button>
+
+            <div class="checkboxes" id="boxes">
+                <label class="checkbox-item">
+                    <span>Barnstol</span>
+                    <input type="checkbox" name="extras" value="barnstol" />
+                </label>
+
+                <label class="checkbox-item">
+                    <span>Rullstol</span>
+                    <input type="checkbox" name="extras" value="rullstol" />
+                </label>
+
+                <label class="checkbox-item">
+                    <span>Stor väska</span>
+                    <input type="checkbox" name="extras" value="vaska" />
+                </label>
+
+                <label class="checkbox-item">
+                    <span>Djur</span>
+                    <input type="checkbox" name="extras" value="djur" />
+                </label>
+
+                <label class="checkbox-item">
+                    <span>Stor bil</span>
+                    <input type="checkbox" name="extras" value="storbil" />
+                </label>
+            </div>
+
+            <label for="notes">Övrigt:</label>
+            <input id="notes" type="text" name="notes" placeholder="Skriv ...">
+            
+            <button class="submit-button" type="submit" class="submit-btn" id="add">Lägg till</button>
+        </div>
+
+
+
+
+        <div class="buttons"> 
+            <button class="cancel" id="cancel">Avbryt</button> 
+            <button class="confirm" id="confirm">Bekräfta bokning</button>
+        </div>
+
+        <div class="image"> <img src="images/map.png" alt="Taxi map"> </div>
+
+        <div class="taxis" id="taxis">
+            <div id="taxi-1"> 
+                
+            </div>
+            
+            <div id="taxi-2"> 
+                
+            </div>
+
+            <div id="taxi-3"> 
+                
+            </div>
+
+            
+            <div id="taxi-4"> 
+                
+            </div>
+
+            <div id="taxi-5"> 
+                 
+            </div>
+
+            <div id="taxi-6"> 
+                 
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
