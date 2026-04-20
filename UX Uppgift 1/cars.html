@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <title>Cars</title>
+        <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+        <style>
+            .greenCar{
+                background-color: #E4FBEA;
+                padding-top: 10px;
+                padding-bottom: 5px;
+                height: 192px;
+                width: 401px;
+            }
+            .yellowCar{
+                background-color: #FDF4D0;
+                padding-top: 10px;
+                padding-bottom: 5px;
+                height: 192px;
+                width: 401px;
+            }
+            .blueCar{
+                background-color: #E1ECFD;
+                border-style: solid;
+                border-color: #518DFC;
+                padding-top: 10px;
+                padding-bottom: 5px;
+                height: 192px;
+                width: 401px;
+            }
+            .blueCar p{
+                font-family: 'Inter';
+                font-size: 16px;
+            }
+            .yellowCar p {
+                font-family: 'Inter';
+                font-size: 16px;
+            }
+            .freeButton{
+                background-color: #86E29E;
+                border-radius: 15px;
+                float:right;
+                font-size: 16px;
+                padding-right: 19px;
+                padding-left: 19px;
+                padding-top: 4px;
+                padding-bottom: 8px;
+                margin-right: 10px;
+                border: none;
+                height: 31px;
+                width: 80px;
+            }
+            .busyButton{
+                background-color: #518DFC;
+                border-radius: 15px;
+                float:right;
+                font-size: 16px;
+                padding-top: 4px;
+                padding-bottom: 8px;
+                margin-right: 10px;
+                border: none;
+                height: 31px;
+                width: 93px;
+                text-align: center;
+            }
+            .pin {
+                float: left;
+                margin-bottom: 21px;
+            }
+            .position {
+                margin-right: 135px;
+            }
+            .destination{
+                margin-right: 30px;
+            }
+            .alert {
+                float:right;
+                margin-right: 20px;
+            }
+        </style>
+        <script>
+            var car1 = document.getElementById("car1");
+            var car2 = document.getElementById("car2");
+            var car3 = document.getElementById("car3");
+            var car4 = document.getElementById("car4");
+            var car5 = document.getElementById("car5");
+            var car6 = document.getElementById("car6");
+
+            function select(){
+                car1.style.borderStyle = "none";
+                car2.style.borderStyle = "none";
+                car3.style.borderStyle = "none";
+                car4.style.borderStyle = "none";
+                car5.style.borderStyle = "none";
+                car6.style.borderStyle = "none";
+                this.style.borderStyle = "solid";
+                this.style.borderColor = "#518DFC"
+            }
+
+            car1.addEventListener('click', function(){
+                car1.style.borderStyle = "none";
+                car2.style.borderStyle = "none";
+                car3.style.borderStyle = "none";
+                car4.style.borderStyle = "none";
+                car5.style.borderStyle = "none";
+                car6.style.borderStyle = "none";
+                car1.style.borderStyle = "solid";
+                this.style.borderColor = "#518DFC"
+            });
+            car2.addEventListener('click', select());
+            car3.addEventListener('click', select());
+            car4.addEventListener('click', select());
+            car5.addEventListener('click', select());
+            car6.addEventListener('click', select());
+
+        </script>
+    </head>
+    <body>
+            <div class="blueCar" id="car1">
+            <p><img src="images/car.png"><b>Reg: WTY 921</b><button class="busyButton">Upptagen</button></p>
+            <p><img src="images/user-line.png">&nbsp Johannes Sten &nbsp<img src="images/clock.png">
+                &nbsp 10:00-20:00</p>
+            <p><img src="images/map-pin.png" class="pin">Nuvarande position &nbsp
+                <img src="images/arrow.png" class="arrow">&nbsp På väg till &nbsp 
+                <img src="images/timer.png"> Ledig om<br>
+                <b class="position">Mariaplan</b>
+                <b class="destination">Kungssten</b>3 min</p>
+            <p>Tid till rast:<br><img src="images/line_4.png"></p>
+        </div>
+        <div class="greenCar" id="car2">
+            <p><img src="images/car.png"><b>Reg: PMM 001</b><button class="freeButton">Ledig</button></p>
+            <p><img src="images/user-line.png">&nbsp Oscar Andersson &nbsp<img src="images/clock.png">
+                &nbsp 09:00-18:00</p>
+            <p><img src="images/map-pin.png" class="pin">Nuvarande position<br><b>Linné</b></p>
+            <p>Tid till rast:<br><img src="images/line_free.png"></p>
+        </div>
+            <div class="greenCar" id="car3">
+            <p><img src="images/car.png"><b>Reg: DPK 549</b><button class="busyButton">Upptagen</button></p>
+            <p><img src="images/user-line.png">&nbsp Daria Wojcik &nbsp<img src="images/clock.png">
+                &nbsp 12:00-22:00</p>
+            <p><img src="images/map-pin.png" class="pin">Nuvarande position &nbsp
+                <img src="images/arrow.png" class="arrow">&nbsp På väg till &nbsp 
+                <img src="images/timer.png"> Ledig om<br>
+                <b class="position">Hovås</b>
+                <b class="destination">Kungssten</b>10 min</p>
+            <p>Tid till rast:<br><img src="images/line_2.png"></p>
+        </div>
+                <div class="greenCar" id="car4">
+            <p><img src="images/car.png"><b>Reg: KPT 976</b><button class="freeButton">Ledig</button></p>
+            <p><img src="images/user-line.png">&nbsp Linus Bengtsson &nbsp<img src="images/clock.png">
+                &nbsp 14:00-00:00</p>
+            <p><img src="images/map-pin.png" class="pin">Nuvarande position<br><b>Valand</b></p>
+            <p>Tid till rast:<br><img src="images/line_3.png"></p>
+        </div>
+                <div class="greenCar" id="car5">
+            <p><img src="images/car.png"><b>Reg: MMP 478</b><button class="freeButton">Ledig</button></p>
+            <p><img src="images/user-line.png">&nbsp Patric Sjöberg &nbsp<img src="images/clock.png">
+                &nbsp 14:30-00:30</p>
+            <p><img src="images/map-pin.png" class="pin">Nuvarande position<br><b>Linné</b></p>
+            <p>Tid till rast:<br><img src="images/line_free.png"></p>
+        </div>
+            <div class="yellowCar" id="car6">
+            <p><img src="images/car.png"><b>Reg: LHP 097 (XL)</b><button class="freeButton">Ledig</button></p>
+            <p><img src="images/user-line.png">&nbsp Chanti Madoni &nbsp<img src="images/clock.png">
+                &nbsp 13:00-23:00</p>
+            <p><img src="images/map-pin.png" class="pin">Nuvarande position<br><b>Kaptensgatan 12</b></p>
+            <p>Tid till rast:<label class="alert"><img src="images/warning.png"> till rast</label><br><img src="images/line_free.png"></p>
+        </div>
+
+    </body>
+</html>

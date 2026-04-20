@@ -26,53 +26,55 @@
         </nav>
 
         <div class="form" id="form">
-            <h2>Information om kund:</h2>
+            <h2 class="formLarge">Information om kund:</h2>
 
-            <p>Nummer som ringer: 070 000 00 00</p>
+            <p class="formMedium">Nummer som ringer: 070 000 00 00</p><br>
 
-            <label for="name">Namn:</label>
-            <input id="name" name="name" type="text" placeholder="Kajsa">
+            <label for="name" class="formMedium">Namn:</label><br>
+            <input id="name" name="name" type="text" placeholder="Kajsa"><br>
 
 
-            <label for="from">Från:</label>
+            <label for="from" class="formMedium">Från:</label><br>
             <input id="from" type="text" name="från" placeholder="Hagens Kapellväg 6, Göteborg">
 
             <button class="add-place-button" type="button" class="add-place" id="place_from">+ Lägg till plats</button>
+            <br>
 
 
-            <label for="till">Till:</label>
+            <label for="till" class="formMedium">Till:</label><br>
             <input id="till" type="text" name="till" placeholder="Drottningtorget 5, Göteborg">
 
             <button class="add-place-button" type="button" class="add-place" id="place_to">+ Lägg till plats</button>
+            <br>
 
             <div class="checkboxes" id="boxes">
                 <label class="checkbox-item">
-                    <span>Barnstol</span>
+                    <span>Barnstol</span><br>
                     <input type="checkbox" name="extras" value="barnstol" />
                 </label>
 
                 <label class="checkbox-item">
-                    <span>Rullstol</span>
+                    <span>Rullstol</span><br>
                     <input type="checkbox" name="extras" value="rullstol" />
                 </label>
 
                 <label class="checkbox-item">
-                    <span>Stor väska</span>
+                    <span>Stor väska</span><br>
                     <input type="checkbox" name="extras" value="vaska" />
                 </label>
 
                 <label class="checkbox-item">
-                    <span>Djur</span>
+                    <span>Djur</span><br>
                     <input type="checkbox" name="extras" value="djur" />
                 </label>
 
                 <label class="checkbox-item">
-                    <span>Stor bil</span>
-                    <input type="checkbox" name="extras" value="storbil" />
+                    <span>Stor bil</span><br>
+                    <input type="checkbox" name="extras" value="storbil"/>
                 </label>
             </div>
 
-            <label for="notes">Övrigt:</label>
+            <label for="notes" class="formMedium">Övrigt:</label><br>
             <input id="notes" type="text" name="notes" placeholder="Skriv ...">
             
             <button class="submit-button" type="submit" class="submit-btn" id="add">Lägg till</button>
@@ -82,35 +84,63 @@
 
 
         <div class="buttons"> 
-            <button class="cancel" id="cancel">Avbryt</button> 
-            <button class="confirm" id="confirm">Bekräfta bokning</button>
+            <button class="cancel" id="cancel"><b>Avbryt</b></button> 
+            <button class="confirm" id="confirm"><b>Bekräfta bokning</b></button>
         </div>
 
         <div class="image"> <img src="images/map.png" alt="Taxi map"> </div>
 
         <div class="taxis" id="taxis">
-            <div id="taxi-1"> 
-                
-            </div>
-            
-            <div id="taxi-2"> 
-                
-            </div>
-
-            <div id="taxi-3"> 
-                
-            </div>
-
-            
-            <div id="taxi-4"> 
-                
-            </div>
-
-            <div id="taxi-5"> 
-                 
-            </div>
-
-            <div id="taxi-6"> 
+             <div class="blueCar" id="car1" onclick="select('car1')">
+            <p><img src="images/car.png"><b>Reg: WTY 921</b><button class="busyButton">Upptagen</button></p>
+            <p><img src="images/user-line.png">&nbsp Johannes Sten &nbsp<img src="images/clock.png">
+                &nbsp 10:00-20:00</p>
+            <p><img src="images/map-pin.png" class="pin">Nuvarande position &nbsp
+                <img src="images/arrow.png" class="arrow">&nbsp På väg till &nbsp 
+                <img src="images/timer.png"> Ledig om<br>
+                <b class="position">Mariaplan</b>
+                <b class="destination">Kungssten</b>3 min</p>
+            <p>Tid till rast:<br><img src="images/line_4.png"></p>
+        </div>
+        <div class="greenCar" id="car2" onclick="select('car2')">
+            <p><img src="images/car.png"><b>Reg: PMM 001</b><button class="freeButton">Ledig</button></p>
+            <p><img src="images/user-line.png">&nbsp Oscar Andersson &nbsp<img src="images/clock.png">
+                &nbsp 09:00-18:00</p>
+            <p><img src="images/map-pin.png" class="pin">Nuvarande position<br><b>Linné</b></p>
+            <p>Tid till rast:<br><img src="images/line_free.png"></p>
+        </div>
+            <div class="greenCar" id="car3" onclick="select('car3')">
+            <p><img src="images/car.png"><b>Reg: DPK 549</b><button class="busyButton">Upptagen</button></p>
+            <p><img src="images/user-line.png">&nbsp Daria Wojcik &nbsp<img src="images/clock.png">
+                &nbsp 12:00-22:00</p>
+            <p><img src="images/map-pin.png" class="pin">Nuvarande position &nbsp
+                <img src="images/arrow.png" class="arrow">&nbsp På väg till &nbsp 
+                <img src="images/timer.png"> Ledig om<br>
+                <b class="position">Hovås</b>
+                <b class="destination">Kungssten</b>10 min</p>
+            <p>Tid till rast:<br><img src="images/line_2.png"></p>
+        </div>
+                <div class="greenCar" id="car4" onclick="select('car4')">
+            <p><img src="images/car.png"><b>Reg: KPT 976</b><button class="freeButton">Ledig</button></p>
+            <p><img src="images/user-line.png">&nbsp Linus Bengtsson &nbsp<img src="images/clock.png">
+                &nbsp 14:00-00:00</p>
+            <p><img src="images/map-pin.png" class="pin">Nuvarande position<br><b>Valand</b></p>
+            <p>Tid till rast:<br><img src="images/line_3.png"></p>
+        </div>
+                <div class="greenCar" id="car5" onclick="select('car5')">
+            <p><img src="images/car.png"><b>Reg: MMP 478</b><button class="freeButton">Ledig</button></p>
+            <p><img src="images/user-line.png">&nbsp Patric Sjöberg &nbsp<img src="images/clock.png">
+                &nbsp 14:30-00:30</p>
+            <p><img src="images/map-pin.png" class="pin">Nuvarande position<br><b>Linné</b></p>
+            <p>Tid till rast:<br><img src="images/line_free.png"></p>
+        </div>
+            <div class="yellowCar" id="car6" onclick="select('car6')">
+            <p><img src="images/car.png"><b>Reg: LHP 097 (XL)</b><button class="freeButton">Ledig</button></p>
+            <p><img src="images/user-line.png">&nbsp Chanti Madoni &nbsp<img src="images/clock.png">
+                &nbsp 13:00-23:00</p>
+            <p><img src="images/map-pin.png" class="pin">Nuvarande position<br><b>Kaptensgatan 12</b></p>
+            <p>Tid till rast:<label class="alert"><img src="images/warning.png"> till rast</label><br><img src="images/line_free.png"></p>
+        </div>
                  
             </div>
         </div>

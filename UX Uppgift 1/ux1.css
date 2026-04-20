@@ -11,7 +11,7 @@ html, body {
     inset: 0;
 
     display: grid;
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 27% 1fr;
     grid-template-rows: 70px 1fr 1fr 70px;
 
     padding-left: 60px;
@@ -33,12 +33,13 @@ html, body {
 
     height: 40px;
     overflow: hidden;
+    font-size: 16px;
     
 }
 
 .header {
     font-family: Convergence;
-    font-size: 28px;
+    font-size: 32px;
 }
 
 .nav-buttons {
@@ -78,12 +79,30 @@ html, body {
     overflow: hidden;
 }
 
+.formLarge {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+
+}
+
+.formMedium {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+
+}
+
+.formSmall {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
 .form input {
     width: 100%;
     padding: 8px;
     margin-bottom: 4px;
     box-sizing: border-box;
-    font-size: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
 }
 
 .form h2 {
@@ -98,17 +117,18 @@ html, body {
 
 .checkboxes {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
     gap: 15px;
     padding: 10px;
 }
 
 .checkbox-item {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    font-size: 8px;
-    transform: scale(1.3)
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
 }
 
 .add-place-button {
@@ -117,15 +137,18 @@ html, body {
     background: none;
     border: none;
     color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
 }
 
 .submit-button {
     margin-left: auto;
-    width: 90px;
-    height: 30px;
+    padding: 10px;
     border: none;
     background: #827F7F;
     color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
 }
 
 .image {
@@ -141,34 +164,23 @@ html, body {
     height: 100%;
     object-fit: cover;
 }
-
 .taxis {
-    grid-column: 2;
+  grid-column: 2;
     grid-row: 3;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    
-
-    overflow: hidden;
+    margin-left: 15px;
 }
 
-.taxis img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
 
-.taxis div {
-    padding-bottom: 10px;
-}
 
 .buttons {
     grid-column: 1 / 3;
     grid-row: 4;
 
     display: flex;
-    align-items: center;
+    
 }
 
 .confirm {
@@ -177,6 +189,8 @@ html, body {
     border: none;
     background: #827F7F;
     color: black;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
 }
 
 .cancel {
@@ -185,8 +199,108 @@ html, body {
     border: none;
     background: #827F7F;
     color: black;
+    font-family: 'Inter', sans-serif;
+    align-items: center;
+    font-size: 20px;
 }
 
 .confirm {
     margin-left: auto;
+}
+
+.greenCar {
+    background-color: #E4FBEA;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    height: 192px;
+    width: 401px;
+}
+
+.yellowCar {
+    background-color: #FDF4D0;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    height: 192px;
+    width: 401px;
+}
+
+.blueCar {
+    background-color: #E1ECFD;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    height: 192px;
+    width: 401px;
+}
+
+.blueCar p {
+     font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.yellowCar p {
+     font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.greenCar p{
+     font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.freeButton {
+    background-color: #86E29E;
+    border-radius: 15px;
+    float: right;
+    font-size: 16px;
+    padding-right: 19px;
+    padding-left: 19px;
+    padding-top: 4px;
+    padding-bottom: 8px;
+    margin-right: 10px;
+    border: none;
+    height: 31px;
+    width: 80px;
+}
+
+.busyButton {
+    background-color: #518DFC;
+    border-radius: 15px;
+    float: right;
+    font-size: 16px;
+    padding-top: 4px;
+    padding-bottom: 8px;
+    margin-right: 10px;
+    border: none;
+    height: 31px;
+    width: 93px;
+    text-align: center;
+}
+
+.pin {
+    float: left;
+    margin-bottom: 21px;
+}
+
+.position {
+    margin-right: 21%;
+}
+
+.destination {
+    margin-right: 7%;
+}
+
+.alert {
+    float: right;
+    margin-right: 20px;
+}
+
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: InterVariable, sans-serif;
+    }
 }

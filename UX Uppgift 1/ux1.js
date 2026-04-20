@@ -8,6 +8,7 @@ var from = document.getElementById("place_from");
 var to = document.getElementById("place_to");
 var boxes = document.getElementById("boxes");
 var notes = document.getElementById("notes");
+var taxis = document.getElementById("taxis");
 var taxi1 = document.getElementById("taxi-1");
 var taxi2 = document.getElementById("taxi-2");
 var taxi3 = document.getElementById("taxi-3");
@@ -15,12 +16,12 @@ var taxi4 = document.getElementById("taxi-4");
 var taxi5 = document.getElementById("taxi-5");
 var taxi6 = document.getElementById("taxi-6");
 
-var car1 = document.createElement("img");
-var car2 = document.createElement("img");
-var car3 = document.createElement("img");
-var car4 = document.createElement("img");
-var car5 = document.createElement("img");
-var car6 = document.createElement("img");
+var car1 = document.getElementById("car1");
+var car2 = document.getElementById("car2");
+var car3 = document.getElementById("car3");
+var car4 = document.getElementById("car4");
+var car5 = document.getElementById("car5");
+var car6 = document.getElementById("car6");
 
 car1.src = "images/car1.png";
 car2.src = "images/car2.png";
@@ -39,24 +40,14 @@ add.addEventListener('click', function() {
     toText.value = null;
     boxes.value = null;
     notes.value = null;
-    taxi1.appendChild(car1);
-    taxi2.appendChild(car2);
-    taxi3.appendChild(car3);
-    taxi4.appendChild(car4);
-    taxi5.appendChild(car5);
-    taxi6.appendChild(car6);
+    taxis.style.display = "grid";
 });
 
 
 cancel.addEventListener('mouseover', highlight);
 cancel.addEventListener('mouseleave', restore);
 cancel.addEventListener('click', function() {
-    taxi1.innerHTML = null;
-    taxi2.innerHTML = null;
-    taxi3.innerHTML = null;
-    taxi4.innerHTML = null;
-    taxi5.innerHTML = null;
-    taxi6.innerHTML = null;
+    taxis.style.display = "none";
 })
 
 conf.addEventListener('mouseover', highlight);
@@ -82,4 +73,17 @@ function textHighlight() {
 
 function textRestore() {
     this.style.color = "#FFFFFF";
+}
+
+function select(id){
+    
+    var car = document.getElementById(id);
+    car1.style.borderStyle = "none";
+    car2.style.borderStyle = "none";
+    car3.style.borderStyle = "none";
+    car4.style.borderStyle = "none";
+    car5.style.borderStyle = "none";
+    car6.style.borderStyle = "none";
+    car.style.borderStyle = "solid";
+    car.style.borderColor = "#518DFC"
 }
