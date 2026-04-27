@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min lilla komponent - vue är magi</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "vue": "https://unpkg.com/vue@3.5.28/dist/vue.esm-browser.js"
+            },
+            "integrity": {
+                "https://unpkg.com/vue@3.5.28/dist/vue.esm-browser.js": "sha384-Q3gg1uvxzo7j5a5zJyKw57OkLMyOhl1sGmQxxn63S3lsr8Ki3ACSKKSvK8zG//7D"
+            }
+        }
+    </script>
+    <script defer src="https://unpkg.com/vue@3.0.5"></script>
+    <script type="module" src="app.js"></script>
+    <script>
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <filter-bar @filter="handleFilter"></filter-bar>
+        <p><img src="images/Back.png" alt="" @click="lastPage"><img src="images/Calendar.png" alt=""><span
+                class="dateRange" v-if="page == 1">1
+                januari 2026 - 26 januari 2026</span>
+            <span class="dateRange" v-else-if="page == 2">29 januari 2026 - 23 februari 2026</span>
+            <span class="dateRange" v-else-if="page == 3">26 februari 2026 - 21 mars 2026</span>
+            <span class="dateRange" v-else-if="page == 4">24 mars 2026 - 18 april 2026</span>
+            <img src="images/Forward.png" alt="" @click="nextPage">
+        </p>
+        <div v-if="show">
+
+            <div class="container" v-if="page == 1">
+                <span class="v0"></span>
+                <b class="v1">V{{firstWeek}}</b>
+                <b class="v2">V{{secondWeek}}</b>
+                <b class="v3">V{{thirdWeek}}</b>
+                <b class="v4">V{{fourthWeek}}</b>
+                <span class="hantverkare">Hantverkare:</span>
+                <span class="names">
+                    <names :names="names"></names>
+                </span>
+                <week type="week1" :dates="weeks[0]"></week>
+                <week type="week2" :dates="weeks[1]"></week>
+                <week type="week3" :dates="weeks[2]"></week>
+                <week type="week4" :dates="weeks[3]"></week>
+                <column :weeks="workerOne"></column>
+                <column :weeks="workerTwo"></column>
+                <column :weeks="workerThree"></column>
+                <column :weeks="workerFour"></column>
+                <column :weeks="workerFive"></column>
+
+            </div>
+
+            <div class="container" v-else-if="page == 2">
+                <span class="v0"></span>
+                <b class="v1">V{{firstWeek}}</b>
+                <b class="v2">V{{secondWeek}}</b>
+                <b class="v3">V{{thirdWeek}}</b>
+                <b class="v4">V{{fourthWeek}}</b>
+
+                <span class="hantverkare">Hantverkare:</span>
+                <span class="names">
+                    <names :names="names"></names>
+                </span>
+                <week type="week1" :dates="weeks[4]"></week>
+                <week type="week2" :dates="weeks[5]"></week>
+                <week type="week3" :dates="weeks[6]"></week>
+                <week type="week4" :dates="weeks[7]"></week>
+                <column :weeks="workerOne"></column>
+                <column :weeks="workerTwo"></column>
+                <column :weeks="workerThree"></column>
+                <column :weeks="workerFour"></column>
+                <column :weeks="workerFive"></column>
+            </div>
+
+            <div class="container" v-else-if="page == 3">
+                <span class="v0"></span>
+                <b class="v1">V{{firstWeek}}</b>
+                <b class="v2">V{{secondWeek}}</b>
+                <b class="v3">V{{thirdWeek}}</b>
+                <b class="v4">V{{fourthWeek}}</b>
+                <span class="hantverkare">Hantverkare:</span>
+                <span class="names">
+                    <names :names="names"></names>
+                </span>
+                <week type="week1" :dates="weeks[8]"></week>
+                <week type="week2" :dates="weeks[9]"></week>
+                <week type="week3" :dates="weeks[10]"></week>
+                <week type="week4" :dates="weeks[11]"></week>
+                <column :weeks="workerOne"></column>
+                <column :weeks="workerTwo"></column>
+                <column :weeks="workerThree"></column>
+                <column :weeks="workerFour"></column>
+                <column :weeks="workerFive"></column>
+            </div>
+
+            <div class="container" v-else-if="page == 4">
+                <span class="v0"></span>
+                <b class="v1">V{{firstWeek}}</b>
+                <b class="v2">V{{secondWeek}}</b>
+                <b class="v3">V{{thirdWeek}}</b>
+                <b class="v4">V{{fourthWeek}}</b>
+                <span class="hantverkare">Hantverkare:</span>
+                <span class="names">
+                    <names :names="names"></names>
+                </span>
+                <week type="week1" :dates="weeks[12]"></week>
+                <week type="week2" :dates="weeks[13]"></week>
+                <week type="week3" :dates="weeks[14]"></week>
+                <week type="week4" :dates="weeks[15]"></week>
+                <column :weeks="workerOne"></column>
+                <column :weeks="workerTwo"></column>
+                <column :weeks="workerThree"></column>
+                <column :weeks="workerFour"></column>
+                <column :weeks="workerFive"></column>
+            </div>
+
+        </div>
+        <div v-else></div>
+    </div>
+</body>
+
+</html>
